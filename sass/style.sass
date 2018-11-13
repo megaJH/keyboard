@@ -1,0 +1,655 @@
+$color_pink: #418ab3
+$color_red: #F28482
+$color_yellow: #fec306
+$color_gray: #F5CAC3
+$color_orange: #f69200
+$color_green: #FFBE0B
+$color_blue: #425953
+
+
+*
+  font-family: 微軟正黑體
+  //border: solid 1px #666
+
+body
+  background-color: #fffaf4
+  
+//導覽列(頂端)
+nav.navbar
+  transition: 1.5s
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top
+  background: transparent
+  a
+    color: white
+    transition: 0.6s
+    &:hover
+      color: $color_orange
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6
+  font-weight: bold
+//封面
+header.jumbotron
+  //display: none
+  text-align: center
+  margin-bottom: 0px
+  background-image: url(http://pic1.win4000.com/wallpaper/c/599aa42de1c28.jpg)
+  background-size: cover
+  background-attachment: fixed
+  .container
+    color: rgba(white, 0.9)
+    padding: 150px 0px
+  hr
+    max-width: 50px
+    border: solid 2px $color_green
+  h5
+    color: rgba(white,0.8)
+    font-weight: normal
+    line-height: 26px
+  P
+    line-height: 10px
+.box
+  width: 30px
+  height: 50px
+  border: solid 1.5px white
+  border-radius: 30px
+  margin-right: auto
+  margin-left: auto
+.point
+  width: 4px
+  height: 4px
+  background-color: white
+  border-radius: 100%
+  margin-right: auto
+  margin-left: auto
+  animation: scroll 1.8s infinite
+//section區塊
+section
+  padding: 50px 0px
+
+//左側個人資訊
+.me_top
+  position: fixed
+  top: 80px
+.section_me
+  height: 100%
+  display: flex
+  justify-content: center
+  //background-color: $color_yellow
+  .col-md-4
+    background-size: cover
+    height: 100%
+    width: 300px
+    overflow: hidden
+  .img_me
+    height: 250px
+    overflow: hidden
+    margin-left: 50px
+  img
+    position: relative
+    width: 75%
+    overflow: hidden
+    top: -20px
+  hr   
+    max-width: 60px
+    border: solid 2px $color_red
+    margin-bottom: 3px
+    margin-top: 3px
+  h4
+    font-weight: 600
+    text-align: center
+  li
+    list-style-type: none
+    line-height: 26px
+    font-size: 16px
+  .icon_me
+    width: 30px
+    display: inline-block
+    text-align: center
+//個人資訊固定於左側
+.section_all_left
+  position: absolute
+  left: 389px
+#section_all
+  position: relative
+  .col-md-3
+    img
+      height: 150px
+.line
+  width: 10px
+  height: 1000px
+  border-radius: 100px 
+  border: dashed 3px $color_green
+ 
+  
+//頁底  
+footer.jumbotron
+  text-align: center
+  margin-bottom: 0px
+  background-image: url(http://pic1.win4000.com/wallpaper/c/599aa42de1c28.jpg)
+  background-size: cover
+  background-attachment: fixed
+  .container
+    color: rgba(white, 0.9)
+    padding: 50px 0px
+  hr
+    max-width: 50px
+    border: solid 2px $color_green
+  input
+    max-width: 400px
+    margin-left: auto
+    margin-right: auto
+    background-color: transparent
+    text-align: center
+    color: white
+  button
+    margin-top: 20px
+    
+//h3 Title//
+.title_h3
+  position: relative
+  top: 40px
+  border: solid 2px $color_green
+  border-radius: 50px
+  background-color: $color_green
+  width: 50px
+  height: 50px
+  font-size: 40px
+  text-align: center
+  color: white
+  font-weight: 700
+  line-height: 45px
+h3
+  display: inline-block
+  position: relative
+  top: -18px
+  left: 55px
+//section_team團隊經驗
+#section_team:hover
+  //.box_line_team
+    opacity: 1
+    transform: rotate(-50deg)
+    transition-duration: 1s
+    height: 60px
+    width: 2px
+  //.box_team_container
+    color: black
+    transition-duration: 1s
+    
+#section_team
+  padding-right: auto
+  padding-left: auto
+  padding: 10px
+  display: inline-block
+.team
+  display: inline-block
+  vertical-align: top
+.box_team
+  display: inline-block
+  font-size: 16px
+  font-weight: 700
+  //border: solid 2px $color_green
+  padding: 6px
+  width: 120px
+  margin-right: 100px
+  text-align: center
+  line-height: 12px
+  span
+    display: inline-block
+.box_point_team
+  border: solid 2px $color_green
+  border-radius: 5px
+  width: 10px
+  height: 10px
+  margin-left: 45px
+  margin-top: 16px
+.box_line_team
+  height: 0px
+  width: 0px
+  border: solid 2px $color_green
+  border-radius: 5px
+  margin-left: 48px
+  margin-top: -35px
+  transform: rotate(350deg)
+  transform-origin: center
+  opacity: 0
+  transition-duration: 1s
+.box_team_container
+  padding-left: 10px
+  line-height: 22px
+  font-weight: 400
+  font-size: 16px
+  color: #fffaf4
+  transition-duration: 1s
+  
+.team_day
+  font-weight: 700
+  font-size: 20px
+//特質//
+#section_traits
+  display: inline
+  padding: 10px
+  margin-top: -60px
+.traits1,.traits2
+  display: flex
+.traits_center
+  display: flex
+  justify-content: center
+#section_traits:hover
+  /*.traits_circle1
+    animation: traits_circle1 2s 1
+    border-right: solid 10px #efefef
+    transition-duration: 1s*/
+  .traits_circle2
+    animation: traits_circle1 2s 1
+    border-right: solid 10px #efefef
+    transition-duration: 1s
+  .traits_circle3
+    animation: traits_circle1 2s 1
+    border-right: solid 10px #efefef
+    border-bottom: solid 10px #efefef
+    border-top: solid 10px #efefef
+    transition-duration: 1s
+  /*.traits_circle4
+    animation: traits_circle1 2s 1
+    border-right: solid 10px #efefef
+    border-bottom: solid 10px #efefef
+    transition-duration: 1s*/
+.traits_circle
+  display: inline-block
+  height: 150px
+  width: 150px
+  font-weight: 600
+  font-size: 16px
+  text-align: center
+  line-height: 150px
+.traits_circle0,.traits_circle1,.traits_circle2,.traits_circle3,.traits_circle4,.traits_circle5
+  border: solid 10px $color_green
+  height: 120px
+  width: 120px
+  border-radius: 50%
+  margin-top: -130px
+  margin-left: auto
+  margin-right: auto
+  transition-duration: 1s
+//專長 Summary of Skill//
+#section_skill:hover
+  .skill_lv1
+    transform-origin: 0
+    transform: scaleX(1.2)
+    transition-duration: 1s
+  .skill_lv2
+    transform-origin: 0
+    transform: scaleX(1.8)
+    transition-duration: 1s
+  .skill_lv3
+    transform-origin: 0
+    transform: scaleX(0.5)
+    transition-duration: 1s
+  .skill_lv4
+    transform-origin: 0
+    transform: scaleX(0.8)
+    transition-duration: 1s
+  .skill_lv5
+    transform-origin: 0
+    transform: scaleX(0.8)
+    transition-duration: 1s
+  .skill_lv6
+    transform-origin: 0
+    transform: scaleX(0.9)
+    transition-duration: 1s
+  .skill_lv7
+    transform-origin: 0
+    transform: scaleX(1.5)
+    transition-duration: 1s
+  .skill_lv8
+    transform-origin: 0
+    transform: scaleX(1.9)
+    transition-duration: 1s
+  .skill_lv9
+    transform-origin: 0
+    transform: scaleX(1.8)
+    transition-duration: 1s
+  .skill_lv10
+    transform-origin: 0
+    transform: scaleX(1.1)
+    transition-duration: 1s
+#section_skill
+  display: inline
+  padding: 10px
+.skill
+  left: 300px
+.icon_skill
+  display: inline-block
+  width: 65px
+  text-align: center
+.skill_text
+  width: 100px
+  position: relative
+  left: 80px 
+  top: 15px
+.skill_bar
+  display: inline-block
+  left: 5px
+  height: 20px
+  width: 500px
+  border: solid 2px $color_gray
+  border-radius: 5px
+  margin-left: 5px
+.skill_lv1,.skill_lv2,.skill_lv3,.skill_lv4,.skill_lv5,.skill_lv6,.skill_lv7,.skill_lv8,.skill_lv9,.skill_lv10
+  height: 12px
+  width: 248px
+  background-color: $color_green
+  border-radius: 2px
+  margin-top: 2px
+  margin-left: 2px
+  transition-duration: 1s
+
+//日常興趣 Interests
+#section_like
+  display: inline-block
+  padding: 5px
+  width: 100%
+.icon_like
+  width: 90%
+  padding: 10px
+  margin-top: 20px 
+  font-size: 18px
+  font-weight: 600
+  text-align: center
+  line-height: 50px
+  p
+    width: 80px
+.like
+  display: flex
+  justify-content: center
+.like1,.like2
+  display: flex
+  justify-content: space-around
+//證照 Certifications
+#section_paper
+  display: inline-block
+  padding: 10px
+  width: 100%
+.paper_flex
+  display: flex
+  align-items: center
+.tqc
+  width: 100px
+  height: 60px
+  border-radius: 8px
+  background-color: $color_red
+  color: #fffaf4
+  font-size: 26px
+  text-align: center
+  font-weight: 900
+  line-height: 56px
+.paper_text
+  font-weight: 600
+  font-size: 18px
+  margin-left: 10px
+  padding-top: 8px
+  line-height: 16px
+//活動經歷 Activity
+#section_exp
+  display: inline-block
+  padding: 10px
+  width: 100%
+.table_a
+  border-top: 13px solid #fffaf4
+  border-bottom: 12px solid #fffaf4
+  border-left: 15px solid $color_green
+  display: inline-block
+  font-size: 18px
+  font-weight: 800
+  padding: 5px
+  margin: 10px
+  top: 10px
+.table_b
+  display: inline-block
+  padding-left: 20px
+  font-size: 16px
+  font-weight: 400
+.exp_line
+  width: 2px
+  height: 220px
+  border: solid 2px $color_gray
+  position: absolute
+  left: 115px
+  margin-top: 30px
+.p_exp
+  position: absolute
+  width: 20px
+  height: 20px
+  border: solid 2px $color_gray
+  background-color: #fffaf4
+  border-radius: 10px
+  left: 107px
+//競賽 Contest
+#section_contest
+  display: inline-block
+  padding: 10px
+  width: 100%
+.contest_line
+  width: 2px
+  height: 300px
+  border: solid 2px $color_gray
+  position: absolute
+  left: 115px
+//作品集 Collection
+#section_work
+  display: inline-block
+  padding: 10px
+  width: 100%
+    
+//hr#位置，for 導覽列的按鈕定位//
+#team,#traits,#skill,#like,#paper,#exp,#contest,#work
+  margin-bottom: 0px
+  position: relative
+  top: -50px
+  visibility: hidden
+
+//KEY Frames
+@keyframes scroll
+  0%
+    margin-top: 8px
+  100%
+    margin-top: 28px
+@keyframes point_left
+  0%
+    transform: skewX(50deg)
+    transform-origin: 0% 100%
+  50%
+    transform: skewX(-50deg)
+    transform-origin: 0% 100%
+  100%
+    transform: skewX(50deg)
+    transform-origin: 0% 100%
+@keyframes point_right
+  0%
+    transform: skewX(-50deg)
+    transform-origin: 0% 100%
+  50%
+    transform: skewX(50deg)
+    transform-origin: 0% 100%
+  100%
+    transform: skewX(-50deg)
+    transform-origin: 0% 100%  
+@keyframes flower
+  0%
+    transform: skewX(-2deg)
+    transform-origin: 110% 80%
+  50%
+    transform: skewX(2deg)
+    transform-origin: 110% 80%
+  100%
+    transform: skewX(-2deg)
+    transform-origin: 110% 80% 
+@keyframes traits_circle1
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+//RWD sm
+@media screen and (max-width: 768px)
+  .container
+    h5
+      font-size: 20px
+  .section_me
+    h4
+      font-size: 20px
+    span
+      font-size: 18px
+  .title_
+    h3
+      font-size: 24px
+      text-align: center
+  .box_point_team,.box_line_team
+    display: none
+  .team
+    display: flex
+    justify-content: center
+    margin-bottom: 50px
+  .box_team
+    width: 150px
+    span
+      font-size: 20px
+  .box_team_container
+    color: black
+    padding-left: 0px
+    margin: 0px
+    width: 120px
+    p
+      font-size: 18px
+  #section_team
+    display: flex
+    flex-direction: column
+    justify-content: center
+  .box_team_container
+    width: 180px
+    p
+      font-size: 20px
+  #section_traits
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  .traits_center
+    display: inline-block
+  .traits_circle
+    font-size: 18px
+    margin: 0px
+    padding: 0px
+  .traits2
+    display: flex
+    justify-content: space-around
+  .traits1
+    display: flex
+    justify-content: space-around
+  .traits_circle0,.traits_circle1,.traits_circle2,.traits_circle3,.traits_circle4,.traits_circle5
+    margin-left: auto
+    margin-right: auto
+  .like
+    display: inline-block
+  .icon_like
+    p
+      font-size: 20px
+      margin-right: auto
+      margin-left: auto
+  .icon_like
+    padding: 8px
+  #section_like
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  #section_skill
+  .skill_text
+    top: 35px
+    left: 60px
+    font-size: 20px
+    font-weight: 600
+  .skill_bar
+    display: block
+  .skill_center
+    margin-right: auto
+    margin-left: auto
+  .skill
+    margin-right: auto
+    margin-left: auto
+  .icon_skill
+    width: 50px
+  .skill_bar
+    position: relative
+    width: 300px
+    left: 0px
+    top: 4px
+  .skill_lv1,.skill_lv2,.skill_lv3,.skill_lv4,.skill_lv5,.skill_lv6,.skill_lv7,.skill_lv8,.skill_lv9,.skill_lv10
+    width: 148px
+  #section_exp
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  .skill
+    margin-left: 0px
+  .table_a
+    display: none
+  .exp_line
+    display: relative
+    left: 20px
+    margin-top: 120px
+    height: 250px
+  .p_exp
+    left: 12px
+    margin-top: 3px
+  .table_b  
+    p
+      font-size: 18px
+  .contest_line,.exp_line,.p_exp
+    display: none
+  #section_contest
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  .table_b
+    padding-left: 0px
+  .table_exp
+    display: flex
+    justify-content: center
+    p
+      text-align: center
+      left: 0px
+  .contest_line
+    left: 20px
+    margin-top: 120px
+    height: 400px
+@media screen and (max-width: 990px)
+  .title_h3
+    position: relative
+    top: 12px
+    margin-left: auto
+    margin-right: auto
+    width: 80px
+    height: 80px
+    font-size: 70px
+    font-weight: 800
+    line-height: 70px
+  h3
+    display: flex
+    justify-content: center
+    top: 0px
+    left: 0px
+    margin-bottom: 40px
+  .paper_flex 
+    display: flex
+    justify-content: center
+    margin-top: 25px
+  .skill
+    margin-left: 50px
+  .box_team_center
+    display: flex
+    justify-content: center
+  .box_team
+    margin-right: 0px
+  .box_point_team
+    margin-left: 100px
+  .box_line_team
+    margin-left: 103px
+  .box_team_container
+    margin-left: 50px
