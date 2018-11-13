@@ -29,21 +29,4 @@ $(window).scroll(function(evt){
   if ($(window).scrollTop() >= team)
     $('.box_line_team').css({"opacity":"1","transform":"rotate(-50deg)","transition-duration":"1s","height":"60px","width":"2px"}),$('.box_team_container').css({"color":"black","transition-duration":"1s"});
 });
-/*var me=function(){
-    if($(window).scrollTop()>=744)
-      $(".section_me").addClass("me_top"),
-      $('#section_all').addClass("section_all_left");
-    else
-      $(".section_me").removeClass("me_top"),
-      $('#section_all').removeClass("section_all_left");
-};*/
-
-/*$(window).resize(function(){
-  $(window).width(function(){  
-    if($(window).width()>=990)
-      $(window).scroll(me);
-    });
-});*/
-
-
-/*var s = skrollr.init();*/
+console.log("welecom")
