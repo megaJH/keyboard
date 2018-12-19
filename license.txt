@@ -1,10 +1,10 @@
 
 
 <!--
-Copyright (c) 2018 by RichardLiao 🇹🇼 (https://codepen.io/bnmghjtyu/pen/RqrboK)
+Copyright (c) 2018 by Mega Jing Hua (https://codepen.io/mega_jh/pen/QJqMNj)
 
 
-Fork of an original work by RichardLiao 🇹🇼 (https://codepen.io/bnmghjtyu/pen/PyagqX)
+Fork of an original work by Mega Jing Hua (https://codepen.io/mega_jh/pen/JeryjO)
 
 
 
