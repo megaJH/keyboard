@@ -26,6 +26,25 @@ App = function (_React$Component) {_inherits(App, _React$Component);
   function App(props) {_classCallCheck(this, App);var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this,
     props));_this.
 
+var convert = {
+  //Latex to MathML
+  getMathML: function(latex) {
+    var js_path=location.href+"/latex2mathml";
+	  var req = new XMLHttpRequest();
+	  req.open("POST",js_path, false);
+	  req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	  var params = "latex="+latex;
+	  //req.setRequestHeader("Content-length", params.length);
+	  //req.setRequestHeader("Connection", "close");
+	  req.send(params);
+	  if (req.status != 200)  {
+		  return "Error generating MathML.";
+	  }
+    console.log(req.responseText)
+	  return req.responseText;
+  }
+}                                    
+convert.getMathML('0')
 
 
 
