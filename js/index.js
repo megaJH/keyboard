@@ -49,7 +49,7 @@ var editor;
 var convert = {
   //Latex to MathML
   getMathML: function(latex) {
-    var js_path=location.href+"latex2mathml";
+    var js_path=location.href+"latex2mathml/";
 	  var req = new XMLHttpRequest();
 	  req.open("POST",js_path, false);
 	  req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
