@@ -43,8 +43,7 @@ var convert = {
     console.log(req.responseText)
 	  return req.responseText;
   }
-}                                    
-convert.getMathML('0')
+}
 
 
 
