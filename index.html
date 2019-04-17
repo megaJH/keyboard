@@ -15,160 +15,24 @@
 
 <body>
 
-  
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1">
 <div class="container" style="max-width: 100%;">
-  <!--MathML輸入窗-->
-  <div class="input-group mb-3 inputKey">
-    <div class="input-group-prepend">
-      <span class="input-group-text " id="inputGroup-sizing-default">MathML</span>
-    </div>
-    <input id='mathmlInput' type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" oninput="inputChangeValue()" value=''>
-  </div>
 <!--Latex輸入窗-->
   <div class="input-group mb-3 inputKey">
     <div class="input-group-prepend">
       <span class="input-group-text " id="inputGroup-sizing-default">LaTex</span>
     </div>
-    <input id='latexInput' type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" oninput="inputChangeValue()" value=''>
+    <input id='latexInput' type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" oninput="input.latexChange()" value=''>
+  </div>
+    <!--MathML輸入窗-->
+  <div class="input-group mb-3 inputKey">
+    <div class="input-group-prepend">
+      <span class="input-group-text " id="inputGroup-sizing-default">MathML</span>
+    </div>
+    <input id='mathmlInput' type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" oninput='input.mathmlChange()' value=''>
   </div>
   <!--MathType鍵盤-->
-  <div id="editorContainer" style=""></div>
-<!-- 數字鍵盤 -->
-<div id="digitalKey" class="digital_background" style="display:block;">
-  <div class="row">
-     <div class="col-xl d-flex justify-content-center">
-       <button type="button" class="btn orangeButton digital" onclick="inputKey('+')"> + </button>
-       <button type="button" class="btn btn-outline-secondary digital" onclick="inputKey('1')"> 1 </button>
-       <button type="button" class="btn btn-outline-secondary digital" onclick="inputKey('2')"> 2 </button>
-       <button type="button" class="btn btn-outline-secondary digital" onclick="inputKey('3')"> 3 </button>
-       <button type="button" class="btn orangeButton digital" onclick="inputKey('(')"> ( </button>
-     </div>
-  </div>
-  <div class="row">
-     <div class="col-xl d-flex justify-content-center">
-       <button type="button" class="btn orangeButton digital" onclick="inputKey('-')"> - </button>
-       <button type="button" class="btn btn-outline-secondary digital" onclick="inputKey('4')"> 4 </button>
-       <button type="button" class="btn btn-outline-secondary digital" onclick="inputKey('5')"> 5 </button>
-       <button type="button" class="btn btn-outline-secondary digital" onclick="inputKey('6')"> 6 </button>
-       <button type="button" class="btn orangeButton digital" onclick="inputKey(')')"> ) </button>
-     </div>
-  </div>
-  <div class="row">  
-     <div class="col-xl d-flex justify-content-center">
-       <button type="button" class="btn orangeButton digital" onclick="inputKey('×')"> × </button>
-       <button type="button" class="btn btn-outline-secondary digital" onclick="inputKey('7')"> 7 </button>
-       <button type="button" class="btn btn-outline-secondary digital" onclick="inputKey('8')"> 8 </button>
-       <button type="button" class="btn btn-outline-secondary digital" onclick="inputKey('9')"> 9 </button>
-       <button type="button" class="btn orangeButton digital" onclick="inputKey('DEL')"> ⇦ </button>
-     </div>
-  </div>
-  <div class="row">
-     <div class="col-xl d-flex justify-content-center">
-       <button type="button" class="btn orangeButton digital" onclick="inputKey('÷')"> ÷ </button>
-       <button type="button" class="btn btn-outline-secondary digital_double" onclick="inputKey('0')"> 0 </button>
-       <button type="button" class="btn orangeButton digital" onclick="inputKey('.')"> . </button>
-       <button id = "englishType" type="button" class="btn digital orangeButton"> EN </button>
-     </div>
-  </div>
-</div>
-<!-- 英文鍵盤(小寫) -->
-<div id="englishKeySmall" class="english_background" style="display:none;">
-  <div class="row">
-     <div class="col-xl d-flex justify-content-center">
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('q')"> q </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('w')"> w </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('e')"> e </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('r')"> r </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('t')"> t </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('y')"> y </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('u')"> u </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('i')"> i </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('o')"> o </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('p')"> p </button>
-     </div>
-  </div>
-  <div class="row">
-     <div class="col-xl d-flex justify-content-center ">
-       <button type="button" class="btn btn-outline-secondary english" onclick="event.keyCode('65')"> a </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('s')"> s </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('d')"> d </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('f')"> f </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('g')"> g </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('h')"> h </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('j')"> j </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('k')"> k </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('l')"> l </button>
-     </div>
-  </div>
-  <div class="row">  
-     <div class="col-xl d-flex justify-content-center">
-       <button id='transSmall' type="button" class="btn orangeButton english"> ⇧ </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('z')"> z </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('x')"> x </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('c')"> c </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('v')"> v </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('b')"> b </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('n')"> n </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('m')"> m </button>
-       <button type="button" class="btn orangeButton english_double" onclick="inputKey('DEL')"> ⇦ </button>
-     </div>
-  </div>
-  <div class="row ">
-     <div class="col-xl d-flex d-flex justify-content-end">
-       <button id="digitalTypeSmall" type="button" class="btn orangeButton english_double "> 123 </button>
-     </div>
-  </div>
-</div>
-
-<!-- 英文鍵盤(大寫) -->
-<div id="englishKeyBig" class="english_background" style="display:none;">
-  <div class="row">
-     <div class="col-xl d-flex justify-content-center">
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('Q')"> Q </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('W')"> W </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('E')"> E </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('R')"> R </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('T')"> T </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('Y')"> Y </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('U')"> U </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('I')"> I </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('O')"> O </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('P')"> P </button>
-     </div>
-  </div>
-  <div class="row">
-     <div class="col-xl d-flex justify-content-center ">
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('A')"> A </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('S')"> S </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('D')"> D </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('F')"> F </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('G')"> G </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('H')"> H </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('J')"> J </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('K')"> K </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('L')"> L </button>
-     </div>
-  </div>
-  <div class="row">  
-     <div class="col-xl d-flex justify-content-center">
-       <button id='transBig'type="button" class="btn orangeButton english"> ⇧ </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('Z')"> Z </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('X)"> X </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('C)"> C </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('V)"> V </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('B)"> B </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('N')"> N </button>
-       <button type="button" class="btn btn-outline-secondary english" onclick="inputKey('M')"> M </button>
-       <button type="button" class="btn orangeButton english_double" onclick="inputKey('DEL')"> ⇦ </button>
-     </div>
-  </div>
-  <div class="row ">
-     <div class="col-xl d-flex d-flex justify-content-end">
-       <button id="digitalTypeBig" type="button" class="btn orangeButton english_double "> 123 </button>
-     </div>
-  </div>
-</div>
-
+  <div id="editorContainer" style="width: device-width;"></div>
 </div>
   <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
