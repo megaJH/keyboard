@@ -20,19 +20,26 @@
 <!--Latex輸入窗-->
   <div class="input-group mb-3 inputKey">
     <div class="input-group-prepend">
-      <span class="input-group-text " id="inputGroup-sizing-default">LaTex</span>
+      <span class="input-group-text" id="inputGroup-sizing-default" style="background-color:#ffffff">LaTex</span>
     </div>
     <input id='latexInput' type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" oninput="input.latexChange()" value=''>
+      <button type="button" class="btn btn-outline-secondary" onclick="input.copy('latexInput')">copy</button>
+      <button type="button" class="btn btn-outline-secondary" onclick="input.paste('latexInput')">all</button>
+ 
   </div>
     <!--MathML輸入窗-->
   <div class="input-group mb-3 inputKey">
     <div class="input-group-prepend">
-      <span class="input-group-text " id="inputGroup-sizing-default">MathML</span>
+      <span class="input-group-text " id="inputGroup-sizing-default" style="background-color:#ffffff">MathML</span>
     </div>
     <input id='mathmlInput' type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" oninput='input.mathmlChange()' value=''>
+    <button type="button" class="btn btn-outline-secondary" onclick="input.copy('mathmlInput')">copy</button>
+    <button type="button" class="btn btn-outline-secondary" onclick="input.paste('mathmlInput')">all</button>
   </div>
   <!--MathType鍵盤-->
-  <div id="editorContainer" style="width: device-width;"></div>
+  <div style="overflow:auto;">
+    <div id="editorContainer" style="width:150%;overflow:auto;"></div>
+  </div>
 </div>
   <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>

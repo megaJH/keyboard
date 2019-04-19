@@ -42,6 +42,14 @@ var convert = {
 }                                    
 //方程式轉換監聽觸發
 var input = {
+  copy:function(id){
+      document.getElementById(id).select();
+      document.execCommand('copy');
+  },
+  paste:function(id){
+    document.getElementById(id).select();
+    document.execCommand('paste');
+  },
   mathmlChange: function(){
       var mathML = document.getElementById('mathmlInput').value;
       editor.setMathML(document.getElementById('mathmlInput').value);
